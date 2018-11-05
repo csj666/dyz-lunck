@@ -2,7 +2,7 @@
  * @Author: chenshujiang 
  * @Date: 2018-11-05 08:52:53 
  * @Last Modified by: chenshujiang
- * @Last Modified time: 2018-11-05 09:16:54
+ * @Last Modified time: 2018-11-05 09:34:01
  */
 var gulp = require("gulp");
 var sass = require("gulp-sass");
@@ -15,7 +15,7 @@ gulp.task("devServer", function() {
         .pipe(server({
             port: 8888,
             middlesave: function() {
-                res.end();
+                next();
             }
         }))
 });
@@ -30,6 +30,4 @@ gulp.task("devwatch", function() {
     return gulp.watch("./src/scss/*.scss", gulp.series("devScss"));
 });
 //串执行
-gulp.task("fun", function() {
-    return gulp.series("devScss", "devServer", "devwatch");
-});
+gulp.task("dev", gulp.series("devScss", "devServer", "devwatch"));
