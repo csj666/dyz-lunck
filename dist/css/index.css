@@ -1,0 +1,1 @@
+body,html{width:100%;height:100%}*{margin:0;padding:0}.wrapper{width:100%;height:100%;padding:20px;box-sizing:border-box;background:#ffffffbd}.wrapper .box{margin:20px 0;width:100%;height:45px;display:flex;overflow:hidden;border-radius:10px;border:1px solid #ccc;button-outline:none;button-border:none}.wrapper .box input{border:none;outline:0;flex:1}
